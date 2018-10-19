@@ -227,16 +227,15 @@ namespace KBVault.Web.Helpers
             var arrayIndex = 0;
             var inside = false;
 
-            for (int i = 0; i < source.Length; i++)
+            foreach (char @let in source)
             {
-                var let = source[i];
-                if (let == '<')
+                if (@let == '<')
                 {
                     inside = true;
                     continue;
                 }
 
-                if (let == '>')
+                if (@let == '>')
                 {
                     inside = false;
                     continue;
@@ -244,7 +243,7 @@ namespace KBVault.Web.Helpers
 
                 if (!inside)
                 {
-                    array[arrayIndex] = let;
+                    array[arrayIndex] = @let;
                     arrayIndex++;
                 }
             }

@@ -12,7 +12,7 @@ namespace KBVault.Web.Helpers
         // Jquery helpers functions
         // taken from:
         // http://www.codeproject.com/Articles/62031/JQueryUI-Datepicker-in-ASP-NET-MVC
-        public static string ConvertDateFormat(this HtmlHelper html)
+        public static string ConvertDateFormat()
         {
             return ConvertDateFormat(Thread.CurrentThread.CurrentCulture.DateTimeFormat.ShortDatePattern);
         }

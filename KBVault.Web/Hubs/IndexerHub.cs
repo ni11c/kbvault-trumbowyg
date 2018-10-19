@@ -30,9 +30,11 @@ namespace KBVault.Web.Hubs
                             KbVaultLuceneHelper.RemoveAttachmentFromIndex(attachment);
                             KbVaultLuceneHelper.AddAttachmentToIndex(attachment);
                         }
+#pragma warning disable CC0004 // Catch block cannot be empty
                         catch (Exception)
                         {
                         }
+#pragma warning restore CC0004 // Catch block cannot be empty
                     }
 
                     KbVaultLuceneHelper.AddArticleToIndex(article);

@@ -183,9 +183,11 @@ namespace KBVault.Web.Controllers
                 {
                     category = CategoryRepository.Get(id);
                 }
+#pragma warning disable CC0004 // Catch block cannot be empty
                 catch (ArgumentNullException)
                 {
                 }
+#pragma warning restore CC0004 // Catch block cannot be empty
 
                 var model = ArticleFactory.CreateArticleViewModelWithDefValues(category);
                 return View(model);

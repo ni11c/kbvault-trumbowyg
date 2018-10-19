@@ -13,7 +13,7 @@ namespace KBVault.Web
 {
     public class Startup
     {
-        public void Configuration(IAppBuilder app)
+        public static void Configuration(IAppBuilder app)
         {
             var builder = new ContainerBuilder();
             builder.RegisterType<TagRepository>().As<ITagRepository>().AsImplementedInterfaces().PropertiesAutowired().SingleInstance();
