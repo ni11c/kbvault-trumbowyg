@@ -20,21 +20,21 @@ namespace KBVault.Web.Helpers
         public static string ConvertDateFormat(string format)
         {
             /*
-                *  Date used in this comment : 5th - Nov - 2009 (Thursday)
-                *
-                *  .NET    JQueryUI        Output      Comment
-                *  --------------------------------------------------------------
-                *  d       d               5           day of month(No leading zero)
-                *  dd      dd              05          day of month(two digit)
-                *  ddd     D               Thu         day short name
-                *  dddd    DD              Thursday    day long name
-                *  M       m               11          month of year(No leading zero)
-                *  MM      mm              11          month of year(two digit)
-                *  MMM     M               Nov         month name short
-                *  MMMM    MM              November    month name long.
-                *  yy      y               09          Year(two digit)
-                *  yyyy    yy              2009        Year(four digit)             *
-                */
+             *  Date used in this comment : 5th - Nov - 2009 (Thursday)
+             *
+             *  .NET    JQueryUI        Output      Comment
+             *  --------------------------------------------------------------
+             *  d       d               5           day of month(No leading zero)
+             *  dd      dd              05          day of month(two digit)
+             *  ddd     D               Thu         day short name
+             *  dddd    DD              Thursday    day long name
+             *  M       m               11          month of year(No leading zero)
+             *  MM      mm              11          month of year(two digit)
+             *  MMM     M               Nov         month name short
+             *  MMMM    MM              November    month name long
+             *  yy      y               09          Year(two digit)
+             *  yyyy    yy              2009        Year(four digit)
+             */
 
             var currentFormat = format;
 

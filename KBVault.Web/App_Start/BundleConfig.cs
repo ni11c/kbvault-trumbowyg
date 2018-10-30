@@ -19,7 +19,8 @@ namespace KBVault.Web
                 "~/Assets/datatables/js/jquery.dataTables.js",
                 "~/Assets/js/plugins/uploader/jquery.uploadfile.js",
                 "~/Assets/js/AdminLTE/app.js",
-                "~/Assets/ckeditor/ckeditor.js", // use Trumbowyg instead with base64 plugin https://alex-d.github.io/Trumbowyg/
+                "~/Assets/trumbowyg/trumbowyg.js",
+                "~/Assets/trumbowyg/plugins/base64/trumbowyg.base64.js",
                 "~/Scripts/jquery.signalR-2.2.1.js",
                 "~/Assets/js/kbvault.js"));
 
@@ -34,6 +35,7 @@ namespace KBVault.Web
                 "~/Assets/datatables/css/jquery.dataTables.css",
                 "~/Assets/datatables/css/jquery.dataTables_themeroller.css",
                 "~/Assets/datatables/css/jquery.datatables.bootstrap.css",
+                "~/Assets/trumbowyg/ui/trumbowyg.css",
                 "~/Assets/css/jquery-ui/jquery-ui-redmond.css",
                 "~/Assets/css/AdminLTE.css"));
         }

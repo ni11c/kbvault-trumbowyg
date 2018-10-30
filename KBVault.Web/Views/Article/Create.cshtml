@@ -37,7 +37,7 @@
     showAnim: "clip",
     changeMonth: true,
     changeYear: true,
-    dateFormat: "@Html.ConvertDateFormat()"
+    dateFormat: "@(KbVaultHtmlHelperExtensions.ConvertDateFormat())"
     });
     $(".datepicker").each(function(i,e){ $(e).datepicker(); });
     $(".datepicker-trigger").click( function(){
@@ -86,11 +86,32 @@
 
     $("#Title").slugIt({output:"#SefName",events:"blur", map :{"'":"-"} });
 
-
-    /* CKEDITOR.replace("Content");*/
-
-
-
+    $('#@(Html.IdFor(m => m.Content))').trumbowyg({
+        btnsDef: {
+            // Create a new dropdown
+            image: {
+                dropdown: ['insertImage', 'base64'],
+                ico: 'insertImage'
+            }
+        },
+    
+        // Redefine the button pane
+        btns: [
+            ['viewHTML'],
+            ['undo'],
+            ['redo'],
+            ['formatting'],
+            ['strong', 'em', 'del'],
+            ['superscript', 'subscript'],
+            ['link'],
+            ['image'], // Our fresh created dropdown
+            ['justifyLeft', 'justifyCenter', 'justifyRight', 'justifyFull'],
+            ['unorderedList', 'orderedList'],
+            ['horizontalRule'],
+            ['removeformat'],
+            ['fullscreen']
+        ]
+    });
 
 }
 
@@ -169,10 +190,9 @@
             </div>
             <div class="form-group">
                 <label for="Content">@UIResources.ArticleCreatePageContentLabel</label>
-                <textarea name="Content" id="Content" class="form-control ckeditor">
+                <textarea name="Content" id="Content" class="form-control">
                     @Html.Raw(System.Web.HttpUtility.HtmlDecode(Model.Content))
                 </textarea>
-                @* Html.TextAreaFor( m=> m.Content , new {@class="form-control ckeditor"}) *@
             </div>    
     
     
