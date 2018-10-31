@@ -22,6 +22,7 @@ namespace KBVault.Web.Models
 
         public long Id { get; set; }
         public string Title { get; set; }
+        [AllowHtml]
         public string Content { get; set; }
         public int Views { get; set; }
         public int Likes { get; set; }
